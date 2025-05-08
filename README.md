@@ -5,7 +5,7 @@
 #### 2. Clonar o repositório: 
 Rode o seguinte comando em algum terminal:
 ```bash
-    git clone https://github.com/TSI-25/site-tsi-25.git
+    git clone https://github.com/juannxyz/portfolio-targa
 ```
 
 #### 3. Como enviar as alterações ao github:
