@@ -127,6 +127,7 @@ const navToggleIcon = navToggle ? navToggle.querySelector("i") : null;
 const navLinks = document.querySelectorAll(".nav__menu .nav__link-item");
 const placeholderTargets = document.querySelectorAll("[data-i18n-placeholder]");
 const contactForm = document.querySelector("[data-contact-form]");
+const whatsappNumber = "5515996308502";
 
 const carousel = {
     cards: document.querySelectorAll("[data-project-card]"),
@@ -142,6 +143,28 @@ let activeProjectIndex = 0;
 let pointerStartX = 0;
 let pointerIsDown = false;
 let swipeTriggered = false;
+
+function buildWhatsappMessage(name, message) {
+    return `Ol\u00E1, me chamo ${name}\n\n${message}`;
+}
+
+function getRequiredFieldsAlert() {
+    return currentLanguage === "en"
+        ? "Please fill in all required fields."
+        : "Todos os campos sao obrigatorios.";
+}
+
+function redirectToWhatsapp(name, message) {
+    const formattedMessage = buildWhatsappMessage(name, message);
+    const encodedMessage = encodeURIComponent(formattedMessage);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.location.href = whatsappUrl;
+}
+
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
 
 function setMenuState(isOpen) {
     if (!nav || !navToggle) {
@@ -351,19 +374,14 @@ if (contactForm) {
 
         const formData = new FormData(contactForm);
         const name = String(formData.get("name") || "").trim();
-        const phone = String(formData.get("phone") || "").trim();
         const message = String(formData.get("message") || "").trim();
-        const greeting = currentLanguage === "en" ? "Hello, I would like to know more." : "Ola, gostaria de saber mais.";
 
-        const text = [
-            greeting,
-            name ? `${currentLanguage === "en" ? "Name" : "Nome"}: ${name}` : "",
-            phone ? `${currentLanguage === "en" ? "WhatsApp" : "WhatsApp"}: ${phone}` : "",
-            message ? `${currentLanguage === "en" ? "Message" : "Mensagem"}: ${message}` : ""
-        ].filter(Boolean).join("\n");
+        if (!name || !message) {
+            window.alert(getRequiredFieldsAlert());
+            return;
+        }
 
-        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
-        window.open(whatsappUrl, "_blank", "noopener");
+        redirectToWhatsapp(name, message);
     });
 }
 

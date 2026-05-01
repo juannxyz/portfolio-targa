@@ -713,6 +713,10 @@ img {
 }
 
 @media (max-width: 980px) {
+    .bridge {
+        padding-bottom: 64px;
+    }
+
     .header {
         min-height: 100svh;
         padding: 118px 24px 92px;
@@ -802,6 +806,10 @@ img {
         padding-bottom: 56px;
     }
 
+    .projects__lead {
+        font-size: 16px;
+    }
+
     .projects__stage {
         width: 100%;
         height: 450px;
@@ -826,7 +834,7 @@ img {
         font-size: clamp(40px, 14vw, 68px);
     }
 
-    .projects__lead,
+    .projects__lead {
         font-size: 15px;
         line-height: 1.6;
     }
@@ -876,3 +884,4 @@ img {
         font-size: 22px;
     }
 }
+
