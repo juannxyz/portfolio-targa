@@ -276,8 +276,7 @@ main,
 
 .hero__title,
 .section__title,
-.manifesto__title,
-.footer__title {
+.manifesto__title {
     letter-spacing: -0.05em;
 }
 
@@ -616,10 +615,10 @@ main,
 
 .manifesto__star {
     display: inline-block;
-    width: clamp(20px, 1.8vw, 28px);
-    height: clamp(20px, 1.8vw, 28px);
-    margin: 0 0.14em;
-    vertical-align: -0.08em;
+    width: 0.9em;
+    height: 0.9em;
+    margin: 0 0.16em;
+    vertical-align: -0.04em;
 }
 
 .services {
@@ -1077,6 +1076,7 @@ main,
     .hero__side--right {
         flex: 0 0 auto;
         width: 100%;
+        font-size: clamp(2rem, 11vw, 2.5rem);
         text-align: center;
     }
 
@@ -1319,12 +1319,10 @@ main,
         width: 180px;
     }
 
-    .hero__side {
-        font-size: 1.1rem;
-    }
-
-    .hero__side--left {
-        font-size: 1.5rem;
+    .hero__side,
+    .hero__side--left,
+    .hero__side--right {
+        font-size: clamp(2rem, 11vw, 2.5rem);
     }
 
     .hero__title,
@@ -1357,55 +1355,49 @@ main,
         min-height: 520px;
     }
 
+    .services__stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        overflow: visible;
+        gap: 34px;
+        padding: 48px 0 0;
+    }
+
+    .services__rows {
+        position: relative;
+        inset: auto;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        overflow: visible;
+        pointer-events: auto;
+    }
+
+    .services__row {
+        display: contents;
+    }
+
+    .services__rows .service-pill {
+        position: static;
+        display: inline-flex;
+        transform: none;
+    }
+
     .services__row--upper .service-pill:last-child,
     .services__row--middle .service-pill:nth-child(2),
     .services__row--middle .service-pill:last-child,
     .services__row--lower .service-pill:nth-child(2),
     .services__row--bottom .service-pill:nth-child(2) {
-        display: none;
-    }
-
-    .services__row--top .service-pill:first-child {
-        top: 22%;
-        left: -18%;
-    }
-
-    .services__row--top .service-pill:last-child {
-        top: 24%;
-        right: -12%;
-    }
-
-    .services__row--upper .service-pill:first-child {
-        top: 35%;
-        left: -20%;
-    }
-
-    .services__row--middle .service-pill:first-child {
-        top: 50%;
-        left: -18%;
-    }
-
-    .services__row--lower .service-pill:first-child {
-        top: 63%;
-        left: -16%;
-    }
-
-    .services__row--lower .service-pill:last-child {
-        top: 62%;
-        right: -12%;
-    }
-
-    .services__row--bottom .service-pill:first-child {
-        bottom: 9%;
-        left: -20%;
-    }
-
-    .services__row--bottom .service-pill:last-child {
-        bottom: 2%;
-        right: -14%;
+        display: inline-flex;
     }
 
     .services__focus {
+        order: -1;
         width: min(100%, 300px);
     }
 
