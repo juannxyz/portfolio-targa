@@ -225,6 +225,7 @@ main,
     font-family: "Gambarino", Georgia, serif;
     font-size: clamp(1.5rem, 3vw, 3rem);
     font-weight: 400;
+    letter-spacing: 0;
     text-align: right;
     text-transform: none;
 }
