@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1015.45 291.92">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 1.46px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #dd3131;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 12 12;
+      }
+
+      .cls-7 {
+        font-family: ClashGrotesk-Medium, 'Clash Grotesk';
+        font-size: 24.24px;
+        font-weight: 500;
+      }
+
+      .cls-7, .cls-8 {
+        fill: #eae7e4;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        stroke-width: 1.4px;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #eae7e4;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-18 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        stroke-width: 1.24px;
+      }
+
+      .cls-5 {
+        stroke-width: 1.27px;
+      }
+
+      .cls-19 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-6 {
+        stroke-width: 1.46px;
+      }
+
+      .cls-23 {
+        fill: #dd3131;
+      }
+    </style>
+  </defs>
+  <text class="cls-7" transform="translate(288.88 236.7)"><tspan class="cls-17" x="0" y="0">B</tspan><tspan class="cls-19" x="14.88" y="0">r</tspan><tspan class="cls-11" x="25.31" y="0">i</tspan><tspan class="cls-18" x="29.58" y="0">e</tspan><tspan class="cls-16" x="41.92" y="0">fi</tspan><tspan class="cls-10" x="54.01" y="0">n</tspan><tspan class="cls-15" x="67.2" y="0">g</tspan></text>
+  <text class="cls-7" transform="translate(483.88 200.74)"><tspan class="cls-12" x="0" y="0">E</tspan><tspan class="cls-21" x="13.36" y="0">s</tspan><tspan class="cls-16" x="24.73" y="0">t</tspan><tspan class="cls-20" x="33.24" y="0">r</tspan><tspan class="cls-22" x="43.52" y="0">a</tspan><tspan class="cls-20" x="55.59" y="0">t</tspan><tspan class="cls-16" x="63.64" y="0">égia</tspan></text>
+  <text class="cls-7" transform="translate(684.89 149.97)"><tspan class="cls-15" x="0" y="0">C</tspan><tspan class="cls-19" x="15.85" y="0">r</tspan><tspan class="cls-15" x="26.28" y="0">i</tspan><tspan class="cls-9" x="30.67" y="0">a</tspan><tspan class="cls-14" x="42.84" y="0">ç</tspan><tspan class="cls-10" x="55.27" y="0">ã</tspan><tspan class="cls-16" x="67.44" y="0">o</tspan></text>
+  <text class="cls-7" transform="translate(867.61 98.53)"><tspan class="cls-16" x="0" y="0">E</tspan><tspan class="cls-21" x="13.46" y="0">n</tspan><tspan class="cls-15" x="26.55" y="0">t</tspan><tspan class="cls-13" x="35.05" y="0">r</tspan><tspan class="cls-16" x="45.62" y="0">ega</tspan></text>
+  <g>
+    <polyline class="cls-6" points="0 291.19 960.84 291.19 960.84 76.02"/>
+    <rect class="cls-8" x="956.1" y="75.29" width="9.49" height="1.46"/>
+  </g>
+  <g>
+    <line class="cls-3" x1="384.59" y1="216.25" x2="384.59" y2="291.19"/>
+    <rect class="cls-8" x="380.03" y="215.55" width="9.11" height="1.4"/>
+  </g>
+  <g>
+    <line class="cls-5" x1="600.15" y1="174.31" x2="600.15" y2="291.19"/>
+    <rect class="cls-8" x="596.03" y="173.67" width="8.24" height="1.27"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="776.96" y1="127.09" x2="776.96" y2="291.19"/>
+    <rect class="cls-8" x="772.94" y="126.48" width="8.04" height="1.24"/>
+  </g>
+  <g>
+    <path class="cls-2" d="M27.1,232.3c126.65-14.62,261.85-35.01,404.15-63.06,184.2-36.31,353.12-80.11,505.5-126.6"/>
+    <polygon class="cls-23" points="934.74 47.51 933.88 47 936.38 42.75 931.96 40.57 932.4 39.67 937.79 42.33 934.74 47.51"/>
+  </g>
+  <line class="cls-1" x1="960.84" y1="74.67" x2="960.84"/>
+  <polygon class="cls-23" points="960.84 0 981.19 8.14 981.19 0 1015.45 16.28 988.14 14.92 988.14 28.15 960.84 17.64 960.84 0"/>
+</svg>

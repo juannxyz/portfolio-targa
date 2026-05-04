@@ -1,198 +1,234 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <title>Jaburu</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./img/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <title>Jaburu</title>
+    <link rel="icon" type="image/png" href="./img/LOGOS/3D PNG.png">
+    <link rel="apple-touch-icon" href="./img/LOGOS/3D PNG.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <header class="header" id="home">
-        <nav class="header__nav nav">
-            <ul class="nav__lista nav__lista--locale">
-                <li class="nav__linguagens">
-                    <button id="idioma-pt" class="nav__linguagens-item is-active" type="button" data-lang="pt" aria-pressed="true">PT</button>
-                </li>
-                <li class="nav__separador">/</li>
-                <li class="nav__linguagens">
-                    <button id="idioma-eng" class="nav__linguagens-item" type="button" data-lang="en" aria-pressed="false">ENG</button>
-                </li>
-            </ul>
+    <div class="page-glow page-glow--top" aria-hidden="true"></div>
+    <div class="page-glow page-glow--middle" aria-hidden="true"></div>
 
-            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>
-                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-                <span class="sr-only" data-i18n="navMenuLabel">Abrir menu</span>
-            </button>
+    <header class="header" id="home">
+        <nav class="nav">
+            <a class="nav__brand" href="#home" aria-label="Jaburu">
+                <img class="nav__brand-logo" src="./img/LOGOS/LOGO JABURU.svg" alt="Logo Jaburu branca">
+            </a>
+
+            <div class="nav__center">
+                <a class="nav__link nav__link--contact" href="mailto:contato@jaburu.com">contato@jaburu.com</a>
+            </div>
+
+            <div class="nav__right">
+                <a class="nav__link nav__link--about" href="#sobre">Sobre</a>
+
+                <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu" data-nav-toggle>
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    <span class="sr-only">Abrir menu</span>
+                </button>
+            </div>
 
             <div class="nav__menu" id="site-menu" data-nav-menu>
-                <ul class="nav__lista nav__lista--primary">
-                    <li class="nav__link">
-                        <a class="nav__link-item" href="#home" data-i18n="navHome">HOME</a>
-                    </li>
-                    <li class="nav__link">
-                        <a class="nav__link-item" href="#projetos" data-i18n="navProjects">PROJETOS</a>
-                    </li>
-                    <li class="nav__link">
-                        <a class="nav__link-item" href="#contato" data-i18n="navContact">CONTATO</a>
-                    </li>
-                    <li class="nav__link">
-                        <a class="nav__link-item" href="#sobre" data-i18n="navAbout">QUEM SOMOS</a>
-                    </li>
-                </ul>
+                <a class="nav__link" href="mailto:contato@jaburu.com">contato@jaburu.com</a>
+                <a class="nav__link" href="#sobre">Sobre</a>
             </div>
         </nav>
 
-        <div class="header__container">
-            <div class="header__conteudo">
-                <p class="header__texto header__texto--marca" data-i18n="heroBrand">COM JABURU</p>
-                <img class="header__image" src="./img/jaburu-logo-3d.jpg" alt="Logo Jaburu" data-i18n-alt="heroLogoAlt">
-                <p class="header__texto header__texto--frase" data-i18n="heroPhrase">Coisas acontecem</p>
+        <div class="hero">
+            <div class="hero__stage">
+                <p class="hero__side hero__side--left">Fly with</p>
+
+                <div class="hero__symbol-wrap" aria-hidden="true">
+                    <img class="hero__symbol" src="./img/LOGOS/3D PNG.png" alt="">
+                </div>
+
+                <p class="hero__side hero__side--right">JABURU</p>
+            </div>
+
+            <div class="hero__copy">
+                <p class="hero__eyebrow">Branding, design e conteudo para empresas que nao querem passar despercebidas.</p>
+
+                <div class="hero__actions">
+                    <a class="cta cta--primary" href="mailto:contato@jaburu.com?subject=Vamos%20conversar%3F">
+                        <span>Vamos conversar?</span>
+                        <span class="arrow-mark" aria-hidden="true">&#8600;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section section" id="sobre">
+            <div class="about-parallax-bg" aria-hidden="true">
+                <div class="about-card about-card-left reveal" data-speed="-0.18">
+                    <img class="about-card__media" src="./img/PORTIFOLIO/6.png" alt="" loading="lazy">
+                </div>
+
+                <div class="about-column about-column-center">
+                    <div class="about-card about-card-center-top reveal" data-speed="0.14">
+                        <img class="about-card__media" src="./img/PORTIFOLIO/2.png" alt="" loading="lazy">
+                    </div>
+                    <div class="about-card about-card-center-bottom reveal" data-speed="-0.10">
+                        <img class="about-card__media" src="./img/PORTIFOLIO/5.png" alt="" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="about-column about-column-right">
+                    <div class="about-card about-card-right-top reveal" data-speed="-0.16">
+                        <img class="about-card__media" src="./img/PORTIFOLIO/3.png" alt="" loading="lazy">
+                    </div>
+                    <div class="about-card about-card-right-bottom reveal" data-speed="0.12">
+                        <img class="about-card__media" src="./img/PORTIFOLIO/1.png" alt="" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="about-card about-card-bottom-left reveal" data-speed="0.08">
+                    <img class="about-card__media" src="./img/PORTIFOLIO/4.png" alt="" loading="lazy">
+                </div>
+            </div>
+
+            <div class="about-fade about-fade-top" aria-hidden="true"></div>
+            <div class="about-fade about-fade-bottom" aria-hidden="true"></div>
+
+            <div class="about-content">
+                <h2>Quem somos?</h2>
+                <p>
+                    Uma agencia de branding, design e conteudo fundada por quem ja esteve
+                    nos bastidores de grandes projetos e decidiu construir o seu proprio.
+                </p>
+            </div>
+        </section>
+
+        <section class="manifesto section" id="manifesto">
+            <div class="manifesto__inner">
+                <p class="manifesto__eyebrow">Acreditamos que</p>
+                <div class="manifesto__frame">
+                    <h2 class="manifesto__title">
+                        <span class="manifesto__line manifesto__line--main">
+                            Marca forte <span class="manifesto__accent">não é</span> luxo.
+                        </span>
+                        <span class="manifesto__line manifesto__line--secondary">
+                            <span class="manifesto__underline">É estratégia.</span>
+                        </span>
+                    </h2>
+
+                    <div class="manifesto__text">
+                        <p class="manifesto__copy">
+                            <img class="manifesto__star" src="./img/ACREDITAMOS/estrelinha.svg" alt="" aria-hidden="true" loading="lazy">
+                            <span>Combinamos visão criativa com pensamento estratégico para que sua empresa ocupe o espaço que merece</span>
+                            <img class="manifesto__star" src="./img/ACREDITAMOS/estrelinha.svg" alt="" aria-hidden="true" loading="lazy">
+                            <span>com identidade, consistência e presença real no mercado.</span>
+                            <img class="manifesto__star" src="./img/ACREDITAMOS/estrelinha.svg" alt="" aria-hidden="true" loading="lazy">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="entregamos">
+            <div class="services__heading">
+                <h3 class="services__eyebrow">
+                    <span>O que entregamos</span>
+                    <span class="arrow-mark arrow-mark--heading" aria-hidden="true">&#8600;</span>
+                </h3>
+            </div>
+
+            <div class="services__stage reveal">
+                <div class="services__rows" aria-hidden="true">
+                    <div class="services__row services__row--top">
+                        <span class="service-pill">Identidade Visual</span>
+                        <span class="service-pill">Identidade Visual</span>
+                        <span class="service-pill">Rebranding</span>
+                        <span class="service-pill">Rebranding</span>
+                    </div>
+
+                    <div class="services__row services__row--upper">
+                        <span class="service-pill">Identidade verbal</span>
+                        <span class="service-pill">Identidade verbal</span>
+                        <span class="service-pill">Design Grafico</span>
+                        <span class="service-pill">Design Grafico</span>
+                    </div>
+
+                    <div class="services__row services__row--middle">
+                        <span class="service-pill">Ilustracao</span>
+                        <span class="service-pill">Identidade sonora</span>
+                        <span class="service-pill">Motion Graphics</span>
+                    </div>
+
+                    <div class="services__row services__row--lower">
+                        <span class="service-pill">Direcao de arte</span>
+                        <span class="service-pill">Naming</span>
+                        <span class="service-pill">Press Kits</span>
+                        <span class="service-pill">Naming</span>
+                    </div>
+
+                    <div class="services__row services__row--bottom">
+                        <span class="service-pill">Brandbook</span>
+                        <span class="service-pill">Brandbook</span>
+                        <span class="service-pill">Midia Out of Home</span>
+                        <span class="service-pill">Midia Out of Home</span>
+                        <span class="service-pill">Materiais impressos</span>
+                        <span class="service-pill">Materiais impressos</span>
+                    </div>
+                </div>
+
+                <div class="services__focus">
+                    <p class="services__focus-lead">Nao e so estetica.</p>
+                    <div class="services__focus-copy">
+                        <p>E posicionamento.</p>
+                        <p>E memoria.</p>
+                        <p>E resultado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process section" id="processo" data-process-root>
+            <div class="services__heading process__heading">
+                <h3 class="services__eyebrow process__eyebrow">
+                    <span>Como trabalhamos</span>
+                    <span class="arrow-mark arrow-mark--heading" aria-hidden="true">&#8600;</span>
+                </h3>
+            </div>
+
+            <div class="process__visual reveal">
+                <img class="process__guide" src="./img/COMO TRABALHAMOS/CAMINHO VISUAL.svg" alt="Fluxo visual de como trabalhamos: briefing, estrategia, criacao e entrega." loading="lazy">
+                <img class="process__bird" src="./img/COMO TRABALHAMOS/JABURU DESENHO.svg" alt="" aria-hidden="true" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contato">
+        <div class="footer__main section">
+            <div class="footer__copy">
+                <h2 class="footer__title">
+                    <span>SUA MARCA</span>
+                    <span>MERECE VOAR</span>
+                    <span>MAIS ALTO</span>
+                </h2>
+
+                <a class="cta cta--dark" href="mailto:contato@jaburu.com?subject=Fale%20com%20a%20gente">
+                    <span>Fale com a gente</span>
+                    <span class="arrow-mark" aria-hidden="true">&#8600;</span>
+                </a>
+            </div>
+
+            <div class="footer__brand">
+                <img class="footer__brand-image" src="./img/RODAPÉ/LOGO JABURU.svg" alt="Wordmark Jaburu" loading="lazy">
             </div>
         </div>
 
-        <img class="header__image--pequeno" src="./img/jaburu-footer.jpg" alt="Logo Jaburu menor" data-i18n-alt="footerLogoAlt">
-    </header>
-
-    <main class="main">
-        <section class="projects section" id="projetos" aria-labelledby="projects-title">
-            <div class="projects__intro">
-                <p class="projects__eyebrow" data-i18n="projectsEyebrow">Selecao recente</p>
-                <h2 class="projects__title" id="projects-title" data-i18n="projectsTitle">Projetos</h2>
-                <p class="projects__lead" data-i18n="projectsLead">Explore uma selecao dos meus projetos mais recentes. Cada proposta equilibra atmosfera, gesto arquitetonico e funcao com linguagem autoral.</p>
-            </div>
-
-            <div class="projects__carousel" data-projects-carousel>
-                <button class="projects__nav projects__nav--prev" type="button" data-projects-prev aria-label="Projeto anterior">
-                    <span aria-hidden="true">&#8592;</span>
-                </button>
-
-                <div class="projects__stage">
-                    <a class="project-card" href="#" target="_blank" rel="noreferrer" data-project-card>
-                        <img class="project-card__image" src="./img/placeholder-vermelho.png" alt="Projeto em destaque" data-project-image>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title" data-project-title></h3>
-                            <p class="project-card__description" data-project-description></p>
-                        </div>
-                    </a>
-
-                    <a class="project-card" href="#" target="_blank" rel="noreferrer" data-project-card>
-                        <img class="project-card__image" src="./img/placeholder-vermelho.png" alt="Projeto em destaque" data-project-image>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title" data-project-title></h3>
-                            <p class="project-card__description" data-project-description></p>
-                        </div>
-                    </a>
-
-                    <a class="project-card" href="#" target="_blank" rel="noreferrer" data-project-card>
-                        <img class="project-card__image" src="./img/placeholder-vermelho.png" alt="Projeto em destaque" data-project-image>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title" data-project-title></h3>
-                            <p class="project-card__description" data-project-description></p>
-                        </div>
-                    </a>
-                </div>
-
-                <button class="projects__nav projects__nav--next" type="button" data-projects-next aria-label="Proximo projeto">
-                    <span aria-hidden="true">&#8594;</span>
-                </button>
-            </div>
-
-            <div class="projects__dots" aria-label="Selecao de projetos">
-                <button class="projects__dot" type="button" data-project-dot="0" aria-label="Projeto 1"></button>
-                <button class="projects__dot" type="button" data-project-dot="1" aria-label="Projeto 2"></button>
-                <button class="projects__dot" type="button" data-project-dot="2" aria-label="Projeto 3"></button>
-            </div>
-        </section>
-
-        <section class="contact section" id="contato" aria-labelledby="contact-title">
-            <div class="contact__content">
-                <div class="contact__intro">
-                    <h2 class="contact__title" id="contact-title">
-                        <span data-i18n="contactTitleLine1">Fale conosco</span>
-                        <span data-i18n="contactTitleLine2">estamos prontos para</span>
-                        <span class="contact__title-accent" data-i18n="contactTitleAccent">te atender.</span>
-                    </h2>
-
-                    <p class="contact__lead" data-i18n="contactLead">Preencha o formulario ao lado e envie sua mensagem. Responderemos o mais rapido possivel.</p>
-
-                    <ul class="contact__features">
-                        <li class="contact__feature">
-                            <span class="contact__feature-icon" aria-hidden="true">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </span>
-                            <div class="contact__feature-copy">
-                                <h3 class="contact__feature-title" data-i18n="contactFeature1Title">Resposta rapida</h3>
-                                <p class="contact__feature-text" data-i18n="contactFeature1Text">Fale diretamente com nosso time pelo WhatsApp.</p>
-                            </div>
-                        </li>
-
-                        <li class="contact__feature">
-                            <span class="contact__feature-icon" aria-hidden="true">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </span>
-                            <div class="contact__feature-copy">
-                                <h3 class="contact__feature-title" data-i18n="contactFeature2Title">Atendimento seguro</h3>
-                                <p class="contact__feature-text" data-i18n="contactFeature2Text">Seus dados estao protegidos e serao usados apenas para contato.</p>
-                            </div>
-                        </li>
-
-                        <li class="contact__feature">
-                            <span class="contact__feature-icon" aria-hidden="true">
-                                <i class="fa-regular fa-clock"></i>
-                            </span>
-                            <div class="contact__feature-copy">
-                                <h3 class="contact__feature-title" data-i18n="contactFeature3Title">Estamos disponiveis</h3>
-                                <p class="contact__feature-text" data-i18n="contactFeature3Text">De segunda a sexta, das 8h as 18h.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <form class="contact__form-card" data-contact-form novalidate>
-                    <div class="contact__form-header">
-                        <span class="contact__form-icon" aria-hidden="true">
-                            <i class="fa-regular fa-message"></i>
-                        </span>
-
-                        <div class="contact__form-heading">
-                            <h3 class="contact__form-title" data-i18n="contactFormTitle">Envie sua mensagem</h3>
-                            <p class="contact__form-subtitle" data-i18n="contactFormSubtitle">Preencha os campos abaixo e envie sua mensagem.</p>
-                        </div>
-                    </div>
-
-                    <div class="contact__field-group">
-                        <label class="contact__label" for="contact-name" data-i18n="contactNameLabel">Seu nome</label>
-                        <input class="contact__input" id="contact-name" name="name" type="text" data-i18n-placeholder="contactNamePlaceholder" placeholder="Digite seu nome">
-                    </div>
-
-                    <div class="contact__field-group">
-                        <label class="contact__label" for="contact-message" data-i18n="contactMessageLabel">Sua mensagem</label>
-                        <textarea class="contact__input contact__input--textarea" id="contact-message" name="message" data-i18n-placeholder="contactMessagePlaceholder" placeholder="Escreva sua mensagem aqui..."></textarea>
-                    </div>
-
-                    <button class="contact__submit" type="submit">
-                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                        <span data-i18n="contactSubmit">Enviar Mensagem pelo WhatsApp</span>
-                    </button>
-
-                    <p class="contact__privacy">
-                        <i class="fa-solid fa-lock" aria-hidden="true"></i>
-                        <span data-i18n="contactPrivacy">Nao armazenamos seus dados. Sua mensagem sera enviada diretamente pelo WhatsApp.</span>
-                    </p>
-                </form>
-            </div>
-        </section>
-
-        <section class="about-teaser section" id="sobre">
-            <p class="about-teaser__eyebrow" data-i18n="aboutEyebrow">Quem somos</p>
-            <h2 class="about-teaser__title" data-i18n="aboutTitle">Arquitetura com direcao, atmosfera e presenca digital.</h2>
-        </section>
-    </main>
+        <div class="footer__meta section">
+            <span>CNPJ: 19.238.120/3821-0938</span>
+            <a href="mailto:contato@jaburu.com">contato@jaburu.com</a>
+            <span>JABURU DIREITOS RESERVADOS</span>
+        </div>
+    </footer>
 </body>
 </html>
