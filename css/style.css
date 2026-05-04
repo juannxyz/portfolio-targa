@@ -621,6 +621,11 @@ main,
     vertical-align: -0.04em;
 }
 
+.manifesto__star:nth-of-type(2),
+.manifesto__star:nth-of-type(3) {
+    vertical-align: -0.12em;
+}
+
 .services {
     display: grid;
     gap: 26px;
