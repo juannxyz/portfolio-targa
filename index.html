@@ -181,17 +181,85 @@
             </div>
         </section>
 
-        <section class="process section" id="processo" data-process-root>
-            <div class="services__heading process__heading">
-                <h3 class="services__eyebrow process__eyebrow">
-                    <span>Como trabalhamos</span>
-                    <span class="arrow-mark arrow-mark--heading" aria-hidden="true">&#8600;</span>
-                </h3>
-            </div>
+        <section class="process" id="processo" data-process-root>
+            <div class="process__inner">
+                <div class="process__heading">
+                    <h3 class="process__label">
+                        <span>Como trabalhamos</span>
+                        <span class="arrow-mark arrow-mark--heading" aria-hidden="true">&#8600;</span>
+                    </h3>
+                </div>
 
-            <div class="process__visual reveal">
-                <img class="process__guide" src="./img/COMO TRABALHAMOS/CAMINHO VISUAL.svg" alt="Fluxo visual de como trabalhamos: briefing, estrategia, criacao e entrega." loading="lazy">
-                <img class="process__bird" src="./img/COMO TRABALHAMOS/JABURU DESENHO.svg" alt="" aria-hidden="true" loading="lazy">
+                <div class="process__steps">
+                    <article class="process-step">
+                        <span class="process-step__number">01</span>
+                        <h3 class="process-step__title">Briefing</h3>
+                        <p>Entendemos sua marca e o espa&ccedil;o que voc&ecirc; quer ocupar.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-step__number">02</span>
+                        <h3 class="process-step__title">Estrat&eacute;gia</h3>
+                        <p>Desenhamos o caminho mais inteligente para chegar l&aacute;.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-step__number">03</span>
+                        <h3 class="process-step__title">Cria&ccedil;&atilde;o</h3>
+                        <p>Executamos com precis&atilde;o criativa e aten&ccedil;&atilde;o a cada detalhe.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-step__number">04</span>
+                        <h3 class="process-step__title">Entrega</h3>
+                        <p>Resultados no ch&atilde;o, n&atilde;o s&oacute; nas nuvens.</p>
+                    </article>
+                </div>
+
+                <div class="chart-wrap">
+                    <img class="process__bird" id="bird" src="./img/COMO TRABALHAMOS/JABURU DESENHO.svg" alt="Jaburu" loading="lazy">
+
+                    <svg class="process-chart" id="cSvg" viewBox="0 0 1015.45 291.92" role="img" aria-label="Gr&aacute;fico de crescimento do processo Jaburu">
+                        <defs>
+                            <mask id="pathRevealMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1015.45" height="291.92">
+                                <path id="cPathMask" d="M27.1,232.3c126.65-14.62,261.85-35.01,404.15-63.06,184.2-36.31,353.12-80.11,505.5-126.6"></path>
+                            </mask>
+                        </defs>
+
+                        <g class="process-axis">
+                            <polyline points="0 291.19 960.84 291.19 960.84 76.02"></polyline>
+                            <rect x="956.1" y="75.29" width="9.49" height="1.46"></rect>
+                        </g>
+
+                        <g class="process-tick" data-tick>
+                            <line x1="384.59" y1="216.25" x2="384.59" y2="291.19"></line>
+                            <rect x="380.03" y="215.55" width="9.11" height="1.4"></rect>
+                            <text x="288.88" y="236.7">Briefing</text>
+                        </g>
+
+                        <g class="process-tick" data-tick>
+                            <line x1="600.15" y1="174.31" x2="600.15" y2="291.19"></line>
+                            <rect x="596.03" y="173.67" width="8.24" height="1.27"></rect>
+                            <text x="483.88" y="200.74">Estrat&eacute;gia</text>
+                        </g>
+
+                        <g class="process-tick" data-tick>
+                            <line x1="776.96" y1="127.09" x2="776.96" y2="291.19"></line>
+                            <rect x="772.94" y="126.48" width="8.04" height="1.24"></rect>
+                            <text x="684.89" y="149.97">Cria&ccedil;&atilde;o</text>
+                        </g>
+
+                        <g class="process-tick" data-tick>
+                            <line x1="960.84" y1="74.67" x2="960.84" y2="291.19"></line>
+                            <rect x="956.1" y="75.29" width="9.49" height="1.46"></rect>
+                            <text x="867.61" y="98.53">Entrega</text>
+                        </g>
+
+                        <path id="cPath" class="process-path" mask="url(#pathRevealMask)" d="M27.1,232.3c126.65-14.62,261.85-35.01,404.15-63.06,184.2-36.31,353.12-80.11,505.5-126.6"></path>
+                        <polygon class="process-curve-arrow" id="curveArrow" points="934.74 47.51 933.88 47 936.38 42.75 931.96 40.57 932.4 39.67 937.79 42.33 934.74 47.51"></polygon>
+                        <polygon class="process-flag" points="960.84 0 981.19 8.14 981.19 0 1015.45 16.28 988.14 14.92 988.14 28.15 960.84 17.64 960.84 0"></polygon>
+                    </svg>
+                </div>
             </div>
         </section>
     </main>

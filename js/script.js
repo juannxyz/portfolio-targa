@@ -8,8 +8,20 @@
     const aboutSection = document.querySelector(".about-section");
     const aboutCards = document.querySelectorAll(".about-card[data-speed]");
     const processRoot = document.querySelector("[data-process-root]");
+    const processPath = document.querySelector("#cPath");
+    const processMaskPath = document.querySelector("#cPathMask");
+    const processSvg = document.querySelector("#cSvg");
+    const chartWrap = document.querySelector(".chart-wrap");
+    const bird = document.querySelector("#bird");
+    const processSteps = document.querySelectorAll(".process-step");
+    const processTicks = document.querySelectorAll("[data-tick]");
+    const curveArrow = document.querySelector("#curveArrow");
+
+    const STEP_THRESHOLDS = [0.02, 0.35, 0.58, 0.82];
+    const TICK_THRESHOLDS = [0.35, 0.58, 0.82, 0.9];
 
     let ticking = false;
+    let processPathLength = 0;
 
     function setMenuState(isOpen) {
         if (!nav || !navToggle || !navMenu) {
@@ -79,15 +91,78 @@
         });
     }
 
-    function updateProcessProgress() {
-        if (!processRoot) {
+    function setupProcessPath() {
+        if (!processPath || !processMaskPath) {
             return;
+        }
+
+        processPathLength = processPath.getTotalLength();
+        processMaskPath.style.strokeDasharray = `${processPathLength} ${processPathLength}`;
+        processMaskPath.style.strokeDashoffset = String(processPathLength);
+    }
+
+    function getProcessProgress() {
+        if (!processRoot) {
+            return 0;
         }
 
         const rect = processRoot.getBoundingClientRect();
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        const progress = clamp((viewportHeight - rect.top) / (viewportHeight + rect.height * 0.2), 0, 1);
-        processRoot.style.setProperty("--process-progress", progress.toFixed(3));
+        const scrollable = processRoot.offsetHeight * 0.75;
+        const scrolled = (viewportHeight * 0.65) - rect.top;
+
+        return clamp(scrolled / scrollable, 0, 1);
+    }
+
+    function placeBird(progress) {
+        if (!processPath || !processSvg || !chartWrap || !bird || !processPathLength) {
+            return;
+        }
+
+        const point = processPath.getPointAtLength(processPathLength * progress);
+        const svgRect = processSvg.getBoundingClientRect();
+        const wrapRect = chartWrap.getBoundingClientRect();
+        const viewBox = processSvg.viewBox.baseVal;
+
+        if (!svgRect.width || !svgRect.height || !viewBox.width || !viewBox.height) {
+            return;
+        }
+
+        const scaleX = svgRect.width / viewBox.width;
+        const scaleY = svgRect.height / viewBox.height;
+        const birdX = svgRect.left - wrapRect.left + (point.x * scaleX);
+        const birdY = svgRect.top - wrapRect.top + (point.y * scaleY);
+
+        bird.style.left = `${birdX}px`;
+        bird.style.top = `${birdY}px`;
+        bird.style.opacity = progress > 0.01 ? "1" : "0";
+    }
+
+    function updateProcessProgress() {
+        if (!processRoot || !processPath || !processMaskPath) {
+            return;
+        }
+
+        if (!processPathLength) {
+            setupProcessPath();
+        }
+
+        const progress = getProcessProgress();
+
+        processMaskPath.style.strokeDashoffset = String(processPathLength * (1 - progress));
+        placeBird(progress);
+
+        processSteps.forEach((step, index) => {
+            step.classList.toggle("on", progress >= STEP_THRESHOLDS[index]);
+        });
+
+        processTicks.forEach((tick, index) => {
+            tick.classList.toggle("on", progress >= TICK_THRESHOLDS[index]);
+        });
+
+        if (curveArrow) {
+            curveArrow.style.opacity = String(clamp((progress - 0.88) / 0.12, 0, 1));
+        }
     }
 
     function updateScrollEffects() {
@@ -127,10 +202,12 @@
             setMenuState(false);
         }
 
+        setupProcessPath();
         requestScrollUpdate();
     });
 
     setupReveal();
     setMenuState(false);
+    setupProcessPath();
     updateScrollEffects();
 })();
