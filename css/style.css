@@ -204,6 +204,18 @@ main,
     padding-top: 24px;
 }
 
+.hero__headline {
+    color: var(--text);
+    font-size: clamp(1.45rem, 2.45vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+
+.hero__headline span {
+    color: var(--accent-bright);
+}
+
 .hero__stage {
     display: flex;
     align-items: center;
@@ -215,7 +227,7 @@ main,
 .hero__side {
     flex: 1 1 0;
     color: rgba(255, 255, 255, 0.9);
-    font-size: clamp(1.2rem, 2.6vw, 2.4rem);
+    font-size: clamp(1.2rem, 4vw, 2.4rem);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -223,7 +235,7 @@ main,
 
 .hero__side--left {
     font-family: "Gambarino", Georgia, serif;
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 3rem);
     font-weight: 400;
     letter-spacing: 0;
     text-align: right;
@@ -944,6 +956,12 @@ main,
     fill: var(--accent);
 }
 
+.process-flag-mast {
+    stroke: var(--accent);
+    stroke-width: 1.46;
+    vector-effect: non-scaling-stroke;
+}
+
 .process-curve-arrow {
     opacity: 0;
     transition: opacity 220ms ease;
@@ -1009,11 +1027,24 @@ main,
 
     .footer__main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0;
+        gap: clamp(56px, 7vw, 120px);
     }
 
     .footer__copy {
-        gap: 14px;
+        gap: 16px;
+    }
+
+    .footer__title {
+        font-size: clamp(2.7rem, 4.5vw, 4.7rem);
+        line-height: 0.92;
+    }
+
+    .footer .cta--dark {
+        min-width: 270px;
+        min-height: 56px;
+        padding: 0 24px;
+        border-radius: 18px;
+        font-size: 1rem;
     }
 
     .footer__brand-image {
@@ -1191,6 +1222,10 @@ main,
         gap: 24px;
         width: 100%;
         padding-top: 28px;
+    }
+
+    .hero__headline {
+        font-size: clamp(1.3rem, 6vw, 1.75rem);
     }
 
     .hero__stage {
